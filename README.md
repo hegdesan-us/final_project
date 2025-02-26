@@ -78,14 +78,15 @@ Now, we aim to compare the performance of the Logistic Regression model to our K
 
 
 (To be determined)
-| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|__Precision__|__Recall__|__F1 Score__|
-| :-:| :-:| :-:|:-:|:-:|:-:|:-:|
-|  Baseline   |  0.0 |0.0    |0.0    | 0 | 0 |0 |
-|  Log Reg    | 0.0 |0.0    |0.0    | 0 | 0 |0 |
-|  KNN   | 0.0 |0.0    |0.0    | 0 | 0 |0 |
-|  SVM   |  0.0 |0.0    |0.0    | 0 | 0 |0 |
-|  RF   | 0.0 |0.0    |0.0    | 0 | 0 |0 |
-|  DTree   |  0.0 |0.0    |0.0    | 0 | 0 |0 |
+
+
+| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
+| :-:| :-:| :-:|:-:| 
+|  Lin Reg    | 0.002 |0.54    |0.50    |
+|  KNN   | 0.0 |0.0    |0.0    |  
+|  SVM   |  0.0 |0.0    |0.0    |  
+|  RF   | 0.0 |0.0    |0.0    |  
+|  DTree   |  0.0 |0.0    |0.0    |  
 
 
 **Next steps**
