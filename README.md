@@ -11,7 +11,7 @@ https://github.com/hegdesan-us/final_project.git
 ```
  **URL for solution Jupyter notebook:** 
 ```
-https://github.com/hegdesan-us/assignment_17/blob/c0b910b7f9078b128a4f284e30b062b9fa5ab0d4/prompt_III.ipynb
+https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36aca516d1a6/Final_Capstone.ipynb
 ```
 
 **Name :** Sanjay Hegde \
