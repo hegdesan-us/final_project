@@ -83,15 +83,28 @@ Now, we aim to compare the performance of the Logistic Regression model to our K
 | __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
 | :-:| :-:| :-:|:-:| 
 |  Lin Reg    | 0.002 |0.54    |0.50    |
-|  KNN   | 0.0 |0.0    |0.0    |  
-|  SVM   |  0.0 |0.0    |0.0    |  
-|  RF   | 0.0 |0.0    |0.0    |  
-|  DTree   |  0.0 |0.0    |0.0    |  
+|  KNN   | 0.004 |0.55    |0.31    |  
+|  DTree   |  0.02 |1.0    |0.37    |  
+|  GB   | 0.05|0.95    |0.78    |  
+|  RF   |  0.32 |1.0    |0.67   |  
+
+## Model performance comparision after Hyper Parameter Tuning
+Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
+
+- GradientBoosting with max_depth=3 and n_estimators=200 seems optimal interms of Test accuracy
 
 
-**Next steps**
+| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
+| :-:| :-:| :-:|:-:| 
+|  Lin Reg    | 0.002 |0.54    |0.50    |
+|  KNN   | 0.0004 |1    |0.75   |  
+|  DTree   |  0.01 |0.28    |0.29    |  
+|  GB   | 0.1|0.98    |0.83   |  
+|  RF   |  0.13 |0.99    |0.67   |  
 
-- Iterate through models based on selective features for better  model
+## Next steps
+
+
 
 
  
