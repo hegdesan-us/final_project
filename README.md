@@ -5,6 +5,12 @@ Final capstone project has been changed since it was first proposed during first
 
 Inorder to gain more experience in model building, I have opted for weight loss analysis. This project is directly related to the area of work as the current company.  I could use this learning to build better models in the existing Fitness app.
 
+ **Research question:** 
+ In this project, I’m trying to predit the weight loss based on daily activity. In addition, will identify the parameters or factors influence the weightless. 
+
+**Why this question is important:** 
+Weight loss is a difficult and often frustrating process, but it can be life-changing. Weightloss has proven to be improving health, self-esteem and life expectancy. Knowing the parameters which can affect the weightloss would be beneficial for people doing weightloss.
+
  **URL for the assignment:** 
 ```
 https://github.com/hegdesan-us/final_project.git
