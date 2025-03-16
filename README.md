@@ -102,8 +102,8 @@ Now, we aim to compare the performance of the Logistic Regression model to our K
 
 ## Next steps
 
-
-
+Current model has ~83% accurate in predicting the weight loss based on calories. This is indeed low. It is possible to increase the accuracy with additional data to train.
+In addition, this model can be used in any of the fitness app to predict the calories burned. In addition to the current feature selection, it is good to collect additional data about food intake ( similar to myfitnesspal etc), these additional signals can be used to build better preduction model. In addition, I would recommend collecting daily weight so that we can use that instead of calories for prediction. 
 
  
 
