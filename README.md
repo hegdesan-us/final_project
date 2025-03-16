@@ -71,13 +71,11 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 
  
 ## Major features for the Machine Learning Models SelectKBest feature selection
-- Selected Features: To be determined
+- Feature selection based on SelectKBest gives following top features
+- [ID, TotalSteps, TotalDistance, TrackerDistance, VeryActiveMinutes, FairlyActiveMinutes, LightlyActiveMinutes, SedentaryMunites ]
 
 ## Model performance comparision
 Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
-
-
-(To be determined)
 
 
 | __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
