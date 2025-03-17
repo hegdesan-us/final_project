@@ -104,6 +104,7 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 ## Model performance comparision
 Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
 
+
 | __Model__ |	__Train Accuracy__	|__Test Accuracy__|	__Train Time__	|__Precision__|	__Recall__|
 | Dummy Classifier|	0.500303	| 0.498786	| 0.012156	| 0.498786	| 1.0 |
 |	Logistic Regression |	0.736945	|0.735772	|4.315663|	0.724329	|0.760078|
