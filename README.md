@@ -52,7 +52,7 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 
 
 ### Data Preperation
- **Not much missing values**
+ - No missing values found in the dataset
 
  ![MissingDataImage](images/missing.png)
 
@@ -111,15 +111,22 @@ This variables have more correlated with the target variable Diabetes_binary¶
 - Feature selection based on SelectKBest gives following top features
 - ['HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income']
 
+
+## Baseline performance measurement
+Determine the baseline perfromance using Dummy Classifier. In summary, baseline performance has ~49% precision and very high recall rate.
+![Baseline Performance Measurement](images/Dummy.png)
+
 ## Model performance comparision
-Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
+Now, we aim to compare the performance of the Dummy Classifier with Logistic Regression model ,  KNN algorithm, Decision Tree, and Gradient Boost models.  Using the default settings for each of the models, fit and score each.  
+
+Summary : Random Forest Model showed prevision score of .91 and test accuracy of 89%. We need to further tune the model.  
 
 
 ![Performance without hyper parameter tuning](images/Performance.png)
  
 
 ## Model performance comparision after Hyper Parameter Tuning
-precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. GradientBoosting with learning_rate': 1, 'n_estimators': 200 has the precision of 95%. However, it is computationally intensive. 
+precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. GradientBoosting with learning_rate': 1, 'n_estimators': 200 has the precision of 0.95. This model has provided the accuracy rate of 89% on the test data.  However, it is computationally intensive. 
 
 
 ![Performance with hyper parameter tuning](images/Performance-hyper.png)
