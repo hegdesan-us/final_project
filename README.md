@@ -155,12 +155,15 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 ## Summary of research questions
 
 **Can we provide accurate predictions of whether an individual has diabetes?**
+
 From the data provided above and the model, with 90% accuracy that we can provide prediction of diabetes
 
 **What risk factors are most predictive of diabetes risk?**
+
 HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income' are the major factos
 
 **Can we use a subset of the risk factors to accurately predict whether an individual has diabetes?**
+
 Yes. as given above we can predict diabetes with subset of factors
 
 
