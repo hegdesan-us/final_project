@@ -1,6 +1,7 @@
 # Final Capstone Project
 
  **Change in the project:** 
+
 Final capstone project has been changed since it was first proposed during first meeting with the TA. Initially, I was intended to do Recommendation system. However, one of the module was fully based on Recommendation system and most of the work I was planning to do was covered in the class module itself. 
 
 Inorder to gain more experience in model building, I have opted for weight loss analysis. This project is directly related to the area of work as the current company.  I could use this learning to build better models in the existing Fitness app. However, data source (https://www.kaggle.com/datasets/arashnic/fitbit/data) contained very limited data and models were not really predictable. Inorder for better accuracy, it needed additional data. 
@@ -9,7 +10,7 @@ Finally, ended up with Health Analysis. This project was related to the health i
 
 
 **Why this Research is important:** 
-Context
+
 Diabetes is among the most prevalent chronic diseases in the United States, impacting millions of Americans each year and exerting a significant financial burden on the economy. Diabetes is a serious chronic disease in which individuals lose the ability to effectively regulate levels of glucose in the blood, and can lead to reduced quality of life and life expectancy. After different foods are broken down into sugars during digestion, the sugars are then released into the bloodstream. This signals the pancreas to release insulin. Insulin helps enable cells within the body to use those sugars in the bloodstream for energy. Diabetes is generally characterized by either the body not making enough insulin or being unable to use the insulin that is made as effectively as needed.
 
 Complications like heart disease, vision loss, lower-limb amputation, and kidney disease are associated with chronically high levels of sugar remaining in the bloodstream for those with diabetes. While there is no cure for diabetes, strategies like losing weight, eating healthily, being active, and receiving medical treatments can mitigate the harms of this disease in many patients. Early diagnosis can lead to lifestyle changes and more effective treatment, making predictive models for diabetes risk important tools for public and public health officials.
@@ -17,6 +18,7 @@ Complications like heart disease, vision loss, lower-limb amputation, and kidney
 The scale of this problem is also important to recognize. The Centers for Disease Control and Prevention has indicated that as of 2018, 34.2 million Americans have diabetes and 88 million have prediabetes. Furthermore, the CDC estimates that 1 in 5 diabetics, and roughly 8 in 10 prediabetics are unaware of their risk. While there are different types of diabetes, type II diabetes is the most common form and its prevalence varies by age, education, income, location, race, and other social determinants of health. Much of the burden of the disease falls on those of lower socioeconomic status as well. Diabetes also places a massive burden on the economy, with diagnosed diabetes costs of roughly $327 billion dollars and total costs with undiagnosed diabetes and prediabetes approaching $400 billion dollars annually.
 
  **Research question:** 
+ 
 Explore some of the following research questions:
 
 - Can we provide accurate predictions of whether an individual has diabetes?
@@ -150,8 +152,22 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 
 ![Performance with hyper parameter tuning](images/Performance-hyper.png)
 
+## Next steps
+
+**Can we provide accurate predictions of whether an individual has diabetes?**
+From the data provided above and the model, with 90% accuracy that we can provide prediction of diabetes
+
+**What risk factors are most predictive of diabetes risk?**
+HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income' are the major factos
+
+**Can we use a subset of the risk factors to accurately predict whether an individual has diabetes?**
+Yes. as given above we can predict diabetes with subset of factors
+
 
 ## Next steps
+- Additional research can be done on the Income and socio economic data. This seems like unexplored area of research on health
+- More data collection on Individuals with Alcohol consumption vs non-alcohol would help determine if there is any correlation to diabetes
+- Subset of risk factors mentioned above can be determined to predict diabetes. This can be integrated into fitness app for educating individuals
 
 
 
