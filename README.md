@@ -18,7 +18,7 @@ Complications like heart disease, vision loss, lower-limb amputation, and kidney
 The scale of this problem is also important to recognize. The Centers for Disease Control and Prevention has indicated that as of 2018, 34.2 million Americans have diabetes and 88 million have prediabetes. Furthermore, the CDC estimates that 1 in 5 diabetics, and roughly 8 in 10 prediabetics are unaware of their risk. While there are different types of diabetes, type II diabetes is the most common form and its prevalence varies by age, education, income, location, race, and other social determinants of health. Much of the burden of the disease falls on those of lower socioeconomic status as well. Diabetes also places a massive burden on the economy, with diagnosed diabetes costs of roughly $327 billion dollars and total costs with undiagnosed diabetes and prediabetes approaching $400 billion dollars annually.
 
  **Research question:** 
- 
+
 Explore some of the following research questions:
 
 - Can we provide accurate predictions of whether an individual has diabetes?
@@ -152,7 +152,7 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 
 ![Performance with hyper parameter tuning](images/Performance-hyper.png)
 
-## Next steps
+## Summary of research questions
 
 **Can we provide accurate predictions of whether an individual has diabetes?**
 From the data provided above and the model, with 90% accuracy that we can provide prediction of diabetes
