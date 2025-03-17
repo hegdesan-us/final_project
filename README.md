@@ -59,14 +59,14 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 
 ## Exploratory Data Analysis (EDA)
 
+- 24K duplicate rows in the data. This has been removed.
+
 **From the bivariate analysis**
-- Clearly there are some zero values for Total Distance and Calories which we will need to clean up (i.e., remove) in data prep
-- Concentration of users with total distance between 3 to 15 miles and Calories between 1000 to 4000
-- Few outliers over 20 miles but still with Calories between 1000 to 4000. Although a couple over 25 miles with Calories over 4000
-- Limited records with Total Distance over 25k miles and Calories over 4000##
-- Strong correlation between Total Steps taken and Distance. As the TotalDistance increases, the TotalSteps also increase showing a linear relationship between the two features.
-- Interesting observations with folks logging zero active minutes but recording values for Total Distance. Maybe Fitbit not working and bad data. These are  candidates to be removed during data preparation (i.e., remove records where Very Active Minutes is zero)
-- We have 33 unique users in the dataset recording their activities over a number of days. Max no of days for some records is 31 days (i.e., one month) Let's explore one user and visualize their activities over that one month period.
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
+- According to the dataset analysis, there was a notable concentration of individuals diagnosed with Diabetes between the ages of 50 to 74 years, in contrast to those without the condition.
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly cardiac conditions increase compared to those without the condition
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly presence of days with some type of illness or injury compared to those without the condition
 
 **From the heatmap:**
 - Strong correlation between Total Distance and Tracker Distance. Very Active Distance also shows a strong correlation with Total Distance and Tracker Distance features.
@@ -95,7 +95,17 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 
 ![Correlationheatmap](images/correlation_matrix.png)
  
-
+This variables have more correlated with the target variable Diabetes_binary¶
+- HeartDiseaseorAttack- PhysHlth
+- Physactivity
+- Education
+- Income ###This variables that have a very weak correlation
+- AnyHealthcare
+- NoDocbcCost
+- Fruits
+- Sex
+- Smoker
+- Veggies
  
 ## Major features for the Machine Learning Models SelectKBest feature selection
 - Feature selection based on SelectKBest gives following top features
