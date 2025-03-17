@@ -64,18 +64,16 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 -   There were around 24K duplicate rows and it has been removed
 -   No missing values
 
-
-**From univariate analysis**
-- LoggedActivitiesDistance, VeryActiveDistance, ModeratelyActiveDistance, LightActiveDistance and SedentaryActiveDistance may not be valuable for modelling. We can remove them
-- There are some rows with Calories = zero and Total Distance = zero as these records are not useful
-
-
 <h2> Visualizations</h2>
 
 **Univariate Data Analysis**
 
  ![Numarical Univariate analysis](images/univariate_analysis.png)
 
+**From univariate analysis**
+
+- 
+-
 
 **Bivariate Data Analysis**
 
@@ -94,6 +92,7 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 ![Correlationheatmap](images/correlation_matrix.png)
 
 **Observation from the heatmap**
+
 Following few features has high Correlation
 - Education
 - PhysHlth
@@ -109,7 +108,7 @@ Following features has low correlation
 
  
 ## Major features for the Machine Learning Models SelectKBest feature selection
-**Observation* 
+**Observation** 
 - Feature selection based on SelectKBest gives following top features
 - ['HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income']
 
@@ -118,6 +117,7 @@ Following features has low correlation
 Determine the baseline perfromance using Dummy Classifier. 
 
 **Observation** Baseline performance using Dummy Classifier  has ~49% precision and very high recall rate.
+
 ![Baseline Performance Measurement](images/Dummy.png)
 
 ## Model performance comparision
