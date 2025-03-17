@@ -57,21 +57,12 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
  ![MissingDataImage](images/missing.png)
 
 
-## Exploratory Data Analysis (EDA)
+## Observation from Exploratory Data Analysis (EDA)
 
-- 24K duplicate rows in the data. This has been removed.
-
-**From the bivariate analysis**
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
-- According to the dataset analysis, there was a notable concentration of individuals diagnosed with Diabetes between the ages of 50 to 74 years, in contrast to those without the condition.
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly cardiac conditions increase compared to those without the condition
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly presence of days with some type of illness or injury compared to those without the condition
-
-**From the heatmap:**
-- Strong correlation between Total Distance and Tracker Distance. Very Active Distance also shows a strong correlation with Total Distance and Tracker Distance features.
-
-- However, there is weak correlation across the board between the computed weight loss features and the other features.
+-   Data is cleaned, no null values, correct data types.
+-   Dataset seems imbalanced and needs to be balanced
+-   There were around 24K duplicate rows and it has been removed
+-   No missing values
 
 
 **From univariate analysis**
@@ -91,42 +82,57 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
  ![Bivariate Data analysis](images/bivariate_analysis.png)
 
 
+ **Observation from the bivariate analysis**
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
+- According to the dataset analysis, there was a notable concentration of individuals diagnosed with Diabetes between the ages of 50 to 74 years, in contrast to those without the condition.
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly cardiac conditions increase compared to those without the condition
+- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly presence of days with some type of illness or injury compared to those without the condition
+
 **Correlation Heatmap**
 
 ![Correlationheatmap](images/correlation_matrix.png)
- 
-This variables have more correlated with the target variable Diabetes_binary¶
-- HeartDiseaseorAttack- PhysHlth
-- Physactivity
+
+**Observation from the heatmap**
+Following few features has high Correlation
 - Education
-- Income ###This variables that have a very weak correlation
-- AnyHealthcare
-- NoDocbcCost
-- Fruits
-- Sex
-- Smoker
+- PhysHlth
+- Gen Health
+- HighBP
+- DiffWalk
+
+Following features has low correlation
+- Income
 - Veggies
+- Stroke
+- BMI
+
  
 ## Major features for the Machine Learning Models SelectKBest feature selection
+**Observation* 
 - Feature selection based on SelectKBest gives following top features
 - ['HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income']
 
 
 ## Baseline performance measurement
-Determine the baseline perfromance using Dummy Classifier. In summary, baseline performance has ~49% precision and very high recall rate.
+Determine the baseline perfromance using Dummy Classifier. 
+
+**Observation** Baseline performance using Dummy Classifier  has ~49% precision and very high recall rate.
 ![Baseline Performance Measurement](images/Dummy.png)
 
 ## Model performance comparision
 Now, we aim to compare the performance of the Dummy Classifier with Logistic Regression model ,  KNN algorithm, Decision Tree, and Gradient Boost models.  Using the default settings for each of the models, fit and score each.  
 
-Summary : Random Forest Model showed prevision score of .91 and test accuracy of 89%. We need to further tune the model.  
+**Observation** Random Forest Model showed prevision score of .91 and test accuracy of 89%. We need to further tune the model.  
 
 
 ![Performance without hyper parameter tuning](images/Performance.png)
  
 
 ## Model performance comparision after Hyper Parameter Tuning
-precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. GradientBoosting with learning_rate': 1, 'n_estimators': 200 has the precision of 0.95. This model has provided the accuracy rate of 89% on the test data.  However, it is computationally intensive. 
+precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. 
+
+**Observation** GradientBoosting with learning_rate': 1, 'n_estimators': 200 has the precision of 0.95. This model has provided the accuracy rate of 89% on the test data.  However, it is computationally intensive. 
 
 
 ![Performance with hyper parameter tuning](images/Performance-hyper.png)
