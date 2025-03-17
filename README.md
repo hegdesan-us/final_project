@@ -72,20 +72,33 @@ https://github.com/hegdesan-us/final_project/blob/b07d33eadcea61195ca01e592fbc36
 
 **From univariate analysis**
 
-- 
--
+- Looking at the sample size ( ~200K vs 25K), overall people with Diabetes vs non-diabetes is skewed data. Later, this needs appropriate scaling 
+- HighBP, HighChol, Smoker and Sex columns are balanced data set
+- DiffWalk, Anyhealthcare, HighAlcConsumption, Heartdesease, Stroke columns are skewed. Any conclusion from these data may not be conclusive.
+
 
 **Bivariate Data Analysis**
 
  ![Bivariate Data analysis](images/bivariate_analysis.png)
+![Bivariate Data analysis](images/AgeGrp.png)
+![Bivariate Data analysis](images/IncomeAge.png)
+![Bivariate Data analysis](images/EdLevel.png)
 
 
  **Observation from the bivariate analysis**
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
-- According to the dataset analysis, there was a notable concentration of individuals diagnosed with Diabetes between the ages of 50 to 74 years, in contrast to those without the condition.
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly cardiac conditions increase compared to those without the condition
-- The analysis of the dataset indicates that individuals diagnosed with Diabetes exhibit a significantly presence of days with some type of illness or injury compared to those without the condition
+- Individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
+  -- Given the sample set ~24.8% non-high BP person having diabetes vs 75.2% high-BP individuals having diabetes
+- Individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
+  -- Given the sample set ~33.1% non-high cholestrol person having diabetes vs 66.9% high-cholestrol individuals having diabetes
+- Individuals with Veggie consumption more than one time per fay seems to have high volume of diabetes. This needs further data exploration
+- Did not see significant correlation between alcohol consumption and diabetes. 
+  -- Sample size is skewed towards non-alcohotic individuals ( > 15000 samples for non-alcoholic vs < 5000 alcoholics)
+- Colestrol check from past 5 years identified patients with Diabetes. This could be a  good information for preventive diagnosis
+- There is no significant correlation with Sex or smoker
+  -- Very small difference ( 51.9% vs 48.1%) difference in individuals with diabetes who smoke vs non-smokers
+- There is ~75% Non-diabetic for the individuals with Physical Activity vs 28% non-diabetic. This is an amazing correlation.
+  -- This data aligns with Diffwalk. People with difficulty in climbing stairs has high percentage od diabetes ( 37%) vs 62% for individuals without difficulty in walking.
+
 
 **Correlation Heatmap**
 
