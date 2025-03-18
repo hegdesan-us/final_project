@@ -125,20 +125,20 @@ Following features has low correlation
 ## Major features for the Machine Learning Models SelectKBest feature selection
 **Observation** 
 - Feature selection based on SelectKBest gives following top features
-- ['HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income']
+- ['HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI']
 
 
 ## Baseline performance measurement
 Determine the baseline perfromance using Dummy Classifier. 
 
-**Observation** Baseline performance using Dummy Classifier  has ~49% precision and very high recall rate.
+**Observation** Baseline performance using Dummy Classifier  has ~50% test and 84% train with 0 precision and accuracy.
 
 ![Baseline Performance Measurement](images/Dummy.png)
 
 ## Model performance comparision
 Now, we aim to compare the performance of the Dummy Classifier with Logistic Regression model ,  KNN algorithm, Decision Tree, and Gradient Boost models.  Using the default settings for each of the models, fit and score each.  
 
-**Observation** Random Forest Model showed prevision score of .91 and test accuracy of 89%. We need to further tune the model.  
+**Observation** Decision Tree Model showed 84% test accuracy with 0.24 recall compared to other models.  
 
 
 ![Performance without hyper parameter tuning](images/Performance.png)
@@ -147,7 +147,7 @@ Now, we aim to compare the performance of the Dummy Classifier with Logistic Reg
 ## Model performance comparision after Hyper Parameter Tuning
 precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. 
 
-**Observation** GradientBoosting with learning_rate': 1, 'n_estimators': 200 has the precision of 0.95. This model has provided the accuracy rate of 89% on the test data.  However, it is computationally intensive. 
+**Observation** GradientBoosting with has the precision of 0.48 and  recall of 0.29. This model has provided the accuracy rate of 84% on the test data.  However, it is computationally intensive. 
 
 
 ![Performance with hyper parameter tuning](images/Performance-hyper.png)
@@ -156,11 +156,11 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 
 **Can we provide accurate predictions of whether an individual has diabetes?**
 
-From the data provided above and the model, with 90% accuracy that we can provide prediction of diabetes
+From the data provided above and the model, with 80-85% accuracy that we can provide prediction of diabetes. Recall rate seems still high needs more parameter tuning to improve the recall rate.
 
 **What risk factors are most predictive of diabetes risk?**
 
-HighBP', 'HighChol', 'BMI', 'HeartDiseaseorAttack', 'GenHlth', 'PhysHlth', 'DiffWalk', 'Age', 'Education', 'Income' are the major factos
+HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI' are the risk factors are most predictive of diabetes risk
 
 **Can we use a subset of the risk factors to accurately predict whether an individual has diabetes?**
 
