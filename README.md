@@ -164,7 +164,7 @@ Random Forest seems to show 82% test accuracy with low recall rate of 0.26. Grad
 ![Performance with hyper parameter tuning](images/Performance-hyper-Lasso.png)
 
 **Observation ( Using Ridge )** 
-Random Forest seems to show 82% test accuracy with low recall rate of 0.26. Gradient Boosting has significantly high recall rate which could be problematic in this analysis considering we are working with health data.   
+Gradient Boosting seems to show ~84% test accuracy with low recall rate of 0.21 and the precision 0.53. However, it is computationally intensive. 
 
 
 ![Performance with hyper parameter tuning](images/Performance-hyper-Ridge.png)
