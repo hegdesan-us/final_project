@@ -50,10 +50,10 @@ https://github.com/hegdesan-us/final_project/blob/974831496ba529572c964c566717a4
 
 **Directory : data** \
  Description : Contains the data file needed for the class project\
- iabetes _ 012 _ health _ indicators _ BRFSS2015.csv is a clean dataset of 253,680 survey responses to the CDC's BRFSS2015. The target variable Diabetes_012 has 3 classes. 0 is for no diabetes or only during pregnancy, 1 is for prediabetes, and 2 is for diabetes. There is class imbalance in this dataset. This dataset has 21 feature variables
+ diabetes _ 012 _ health _ indicators _ BRFSS2015.csv is a clean dataset of 253,680 survey responses to the CDC's BRFSS2015. The target variable Diabetes_012 has 3 classes. 0 is for no diabetes or only during pregnancy, 1 is for prediabetes, and 2 is for diabetes. There is class imbalance in this dataset. This dataset has 21 feature variables
 
 
-### Data Preperation
+### Data Preparation
  - No missing values found in the dataset
 
  ![MissingDataImage](images/missing.png)
@@ -91,11 +91,11 @@ https://github.com/hegdesan-us/final_project/blob/974831496ba529572c964c566717a4
 - Individuals diagnosed with Diabetes exhibit a significantly greater incidence of hypertension compared to those without the condition
   -- Given the sample set ~24.8% non-high BP person having diabetes vs 75.2% high-BP individuals having diabetes
 - Individuals diagnosed with Diabetes exhibit a significantly higher cholesterol compared to those without the condition
-  -- Given the sample set ~33.1% non-high cholestrol person having diabetes vs 66.9% high-cholestrol individuals having diabetes
+  -- Given the sample set ~33.1% non-high cholesterol person having diabetes vs 66.9% high-cholesterol individuals having diabetes
 - Individuals with Veggie consumption more than one time per fay seems to have high volume of diabetes. This needs further data exploration
 - Did not see significant correlation between alcohol consumption and diabetes. 
-  -- Sample size is skewed towards non-alcohotic individuals ( > 15000 samples for non-alcoholic vs < 5000 alcoholics)
-- Colestrol check from past 5 years identified patients with Diabetes. This could be a  good information for preventive diagnosis
+  -- Sample size is skewed towards non-alcoholic individuals ( > 15000 samples for non-alcoholic vs < 5000 alcoholics)
+- Cholesterol check from past 5 years identified patients with Diabetes. This could be a  good information for preventive diagnosis
 - There is no significant correlation with Sex or smoker
   -- Very small difference ( 51.9% vs 48.1%) difference in individuals with diabetes who smoke vs non-smokers
 - There is ~75% Non-diabetic for the individuals with Physical Activity vs 28% non-diabetic. This is an amazing correlation.
@@ -109,33 +109,42 @@ https://github.com/hegdesan-us/final_project/blob/974831496ba529572c964c566717a4
 **Observation from the heatmap**
 
 Following few features has high Correlation
-- Education
-- PhysHlth
+
 - Gen Health
 - HighBP
 - DiffWalk
+- HihgChol
 
 Following features has low correlation
-- Income
+
+- Fruits
 - Veggies
-- Stroke
-- BMI
+- MentHlth
+- Sex
+
+Random Observations
+
+- Education and Income are highly correlated with each other
+- DiffWalk and PhysHlth are high correlated with each other
+- HighBP and Age are correlated with each other
 
  
 ## Major features for the Machine Learning Models SelectKBest feature selection
 **Observation** 
-- Feature selection based on SelectKBest gives following top features
-- ['HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI']
+- Feature selection based on Lasso gives following top features. Considering Lasso just zeros columns not important, I have decided to use Ridge
+  - ['HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI']
+- Feature selection based on Ridge gives following top features. I have opted with Ridge feature selection.
+  - ['GenHlth', 'HighBP', 'BMI', 'Age', 'HighChol', 'HvyAlcoholConsump','CholCheck', 'Sex', 'Income', 'PhysHlth']
 
 
 ## Baseline performance measurement
-Determine the baseline perfromance using Dummy Classifier. 
+Determine the baseline performance using Dummy Classifier. 
 
-**Observation** Baseline performance using Dummy Classifier  has ~50% test and 84% train with 0 precision and accuracy.
+**Observation** Baseline performance using Dummy Classifier  has ~50% test and 84% train with 0 precision and accuracy. This means, model is completely un-reliable at this time. 
 
 ![Baseline Performance Measurement](images/Dummy.png)
 
-## Model performance comparision
+## Model performance comparison
 Now, we aim to compare the performance of the Dummy Classifier with Logistic Regression model ,  KNN algorithm, Decision Tree, and Gradient Boost models.  Using the default settings for each of the models, fit and score each.  
 
 **Observation** Decision Tree Model showed 84% test accuracy with 0.24 recall compared to other models.  
@@ -144,13 +153,23 @@ Now, we aim to compare the performance of the Dummy Classifier with Logistic Reg
 ![Performance without hyper parameter tuning](images/Performance.png)
  
 
-## Model performance comparision after Hyper Parameter Tuning
+## Model performance comparison after Hyper Parameter Tuning
 precision focuses on minimizing false positives (incorrectly identifying a healthy individual as having a condition), while recall prioritizes identifying all actual cases (minimizing false negatives, or missing real cases). For this analysis, we focus on precision. 
 
-**Observation** GradientBoosting with has the precision of 0.48 and  recall of 0.29. This model has provided the accuracy rate of 84% on the test data.  However, it is computationally intensive. 
+**Observation ( Using Lasso )** 
+
+Random Forest seems to show 82% test accuracy with low recall rate of 0.26. Gradient Boosting has significantly high recall rate which could be problematic in this analysis considering we are working with health data.   
 
 
-![Performance with hyper parameter tuning](images/Performance-hyper.png)
+![Performance with hyper parameter tuning](images/Performance-hyper-Lasso.png)
+
+**Observation ( Using Ridge )** 
+Random Forest seems to show 82% test accuracy with low recall rate of 0.26. Gradient Boosting has significantly high recall rate which could be problematic in this analysis considering we are working with health data.   
+
+
+![Performance with hyper parameter tuning](images/Performance-hyper-Ridge.png)
+
+
 
 ## Summary of research questions
 
@@ -159,7 +178,7 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 From the data provided above and the model, with 80-85% accuracy that we can provide prediction of diabetes. Recall rate seems still high needs more parameter tuning to improve the recall rate.
 
 **What risk factors are most predictive of diabetes risk?**
-
+Considering Lasso and Ridge based feature selection both has similar accuracy and precision, we could just use following features from Lasso for model building.
 HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI' are the risk factors are most predictive of diabetes risk
 
 **Can we use a subset of the risk factors to accurately predict whether an individual has diabetes?**
