@@ -39,7 +39,7 @@ https://github.com/hegdesan-us/final_project.git
 ```
  **URL for solution Jupyter notebook:** 
 ```
-https://github.com/hegdesan-us/final_project/blob/f2a45f0364af11331f26b68936e1d8ae1eb56af0/Final_Capstone.ipynb
+https://github.com/hegdesan-us/final_project/blob/974831496ba529572c964c566717a44e242242cc/Final_Capstone.ipynb
 ```
 
 **Name :** Sanjay Hegde \
