@@ -147,7 +147,7 @@ Determine the baseline performance using Dummy Classifier.
 ## Model performance comparison
 Now, we aim to compare the performance of the Dummy Classifier with Logistic Regression model ,  KNN algorithm, Decision Tree, and Gradient Boost models.  Using the default settings for each of the models, fit and score each.  
 
-**Observation** Decision Tree Model showed 84% test accuracy with 0.24 recall compared to other models.  
+**Observation** Random Forest Model showed ~82% test accuracy with 0.24 recall compared to other models.  
 
 
 ![Performance without hyper parameter tuning](images/Performance.png)
