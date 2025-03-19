@@ -158,7 +158,7 @@ precision focuses on minimizing false positives (incorrectly identifying a healt
 
 **Observation ( Using Lasso )** 
 
-Random Forest seems to show 82% test accuracy with low recall rate of 0.26. Gradient Boosting has significantly high recall rate which could be problematic in this analysis considering we are working with health data.   
+KNN seems to show ~82% test accuracy with low recall rate of 0.24. Gradient Boosting has significantly high recall rate which could be problematic in this analysis considering we are working with health data.   
 
 
 ![Performance with hyper parameter tuning](images/Performance-hyper-Lasso.png)
@@ -178,6 +178,7 @@ Gradient Boosting seems to show ~84% test accuracy with low recall rate of 0.21 
 From the data provided above and the model, with 80-85% accuracy that we can provide prediction of diabetes. Recall rate seems still high needs more parameter tuning to improve the recall rate.
 
 **What risk factors are most predictive of diabetes risk?**
+
 Considering Lasso and Ridge based feature selection both has similar accuracy and precision, we could just use following features from Lasso for model building.
 HighBP', 'GenHlth', 'HighChol', 'Age', 'BMI' are the risk factors are most predictive of diabetes risk
 
@@ -187,6 +188,7 @@ Yes. as given above we can predict diabetes with subset of factors
 
 
 ## Next steps
+
 - Additional research can be done on the Income and socio economic data. This seems like unexplored area of research on health
 - More data collection on Individuals with Alcohol consumption vs non-alcohol would help determine if there is any correlation to diabetes
 - Subset of risk factors mentioned above can be determined to predict diabetes. This can be integrated into fitness app for educating individuals
